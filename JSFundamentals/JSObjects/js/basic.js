@@ -37,3 +37,5 @@ let users = {
         console.log(num + ' - '+ key['last_name'] + ', ' + key['first_name'] + ' - ' + totalChar );
      }
  }
+
+ 
