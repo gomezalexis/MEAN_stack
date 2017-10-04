@@ -9,6 +9,7 @@ class Ninja {
 
     sayName(){
         console.log("My ninja name is " + this.name);
+        return this;
     }
 
     showStats(){
@@ -17,6 +18,7 @@ class Ninja {
 
     drinkSake(){
         this.health += 10;
+        return this;
     }
 }
 
@@ -43,4 +45,6 @@ blueNinja.drinkSake();
 blueNinja.showStats();
 master.speakWisdom();
 master.showStats();
+master.sayName().drinkSake().showStats();
+// master.showStats();
 
