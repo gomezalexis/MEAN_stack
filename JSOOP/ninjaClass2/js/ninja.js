@@ -52,3 +52,5 @@ blueNinja.punch(redNinja);
 redNinja.showStats();
 redNinja.kick(blueNinja).punch(blueNinja);
 blueNinja.showStats();
+redNinja.showStats();
+blueNinja.drinkSake().showStats();
