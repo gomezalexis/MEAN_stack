@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Quoting - Error</title>
+</head>
+<body>
+    <h2>There was an error</h2>
+    <% if(typeof(errors) != 'undefined') { %>
+        <div id="errormessage">
+        <% for (var x in errors) {%>
+        <h3><%= errors[x].message %></h3>
+        <%}%>
+        </div>
+    <%}%>
+
+</body>
+</html>
