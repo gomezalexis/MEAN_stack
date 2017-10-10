@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add New</title>
+</head>
+<body>
+    <a href="/">Main Page</a>
+    <h2>Add new Mongoose:</h2>
+    <form action="/mongooses" method="post">
+        Animal: <input type="text" name="theAnimal"><br><br>
+        Type of Animal: <select name="class" id="">
+            <option value="Mammal">Mammal</option>
+            <option value="Amphibian">Amphibian</option>
+            <option value="Reptile">Reptile</option>
+            <option value="Fish">Fish</option>
+            <option value="Bird">Bird</option>
+        </select><br><br>
+        Lifespan: <input type="number" name="lifespan"><br><br>
+        <button value="Submit">Add the new Mongoose</button>
+    </form>
+</body>
+</html>

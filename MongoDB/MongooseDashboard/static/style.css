@@ -1,0 +1,29 @@
+.anAnimal{
+    border: 2px dashed darkblue;
+    margin: 10px;
+    padding: 10px;
+    border-style: none none dashed dashed;
+    display: inline-block;
+}
+
+#errormessage{
+    background-color: rgb(244, 185, 196);
+}
+
+span{
+    color: peru;
+}
+
+#editar{
+    color: purple;
+}
+
+.papa{
+    color: olive;
+}
+
+h1{
+    color: magenta;
+}
+
+

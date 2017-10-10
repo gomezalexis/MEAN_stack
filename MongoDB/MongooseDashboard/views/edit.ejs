@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Editing</title>
+</head>
+<body>
+    <a href="/">Main Page</a>
+    <h1>Edit Mongoose: <span id="editar"><%= animal.theAnimal %></span></h1>
+    <form action="/mongooses/<%= animal.id %>" method="post">
+        Type of Animal: <select name="class" id="">
+            <option value="Mammal">Mammal</option>
+            <option value="Amphibian">Amphibian</option>
+            <option value="Reptile">Reptile</option>
+            <option value="Fish">Fish</option>
+            <option value="Bird">Bird</option>
+        </select><br><br>
+        Lifespan: <input type="number" name="lifespan"><br><br>
+        <button value="submit">Save the Changes</button>
+    </form><br>
+    <form action="/mongooses/destroy/<%= animal.id %>" method="post">
+    <button value="submit">Delete <%= animal.theAnimal %></button>
+    </form>
+</body>
+</html>

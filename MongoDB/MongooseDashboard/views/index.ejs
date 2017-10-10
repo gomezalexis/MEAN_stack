@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Mongoose Dashboard</title>
+</head>
+<body>
+    <h1>Mongoose Dashboard:</h1>
+    <% for (var x in animals) {%>
+    <div class="anAnimal">
+        <h3><a href="mongooses/<%= animals[x].id %>"><%= animals[x].theAnimal %></a></h3>
+        <p><b>Type of animal:</b> <%= animals[x].class %></p>
+        <p><b>Average Lifespan:</b> <%= animals[x].lifespan %></p>
+        <p><b>Created at:</b> <span><%= animals[x].createdAt %></span></p><br>
+        <a href="mongooses/edit/<%= animals[x].id %>">Edit or Delete</a>
+    </div>
+    <%}%>
+
+    <a href="/mongooses/new"><button>Go to Add new Mongoose</button></a>
+</body>
+</html>
