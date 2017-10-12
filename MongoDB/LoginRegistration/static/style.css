@@ -1,0 +1,22 @@
+h1{
+    color: olive;
+    background-color: palegreen;
+    margin: 16px;
+    padding: 10px;
+}
+
+.errormessage{
+    background-color: lightcoral;
+}
+
+#registerarea{
+    padding: 16px;
+    background-color: papayawhip;
+    margin: 2px 17px;
+}
+
+#loginarea{
+    padding: 16px;
+    background-color: plum;
+    margin: 5px 17px;
+}

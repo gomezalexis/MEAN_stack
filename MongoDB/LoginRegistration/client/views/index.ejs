@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Login and Registration</title>
+</head>
+<body>
+    <h1>Login and Registration</h1>
+    <div id="registerarea">
+        <h2>Register:</h2>
+        <form action="/user/create" method="post">
+            First Name: <input type="text" name="firstName"><br><br>
+            Last Name: <input type="text" name="lastName"><br><br>
+            Date of Birth: <input type="date" name="birthday"><br><br>
+            Email: <input type="text" name="email"><br><br>
+            Password: <input type="password" name="password"><br><br>
+            Password Confirmation: <input type="password" name="passwordConfirm"><br><br>
+            <button value="submit">Register</button>
+        </form>
+    </div>
+    <div id="loginarea">
+        <h2>Login</h2>
+        <form action="/user/login" method="post">
+            Email: <input type="text" name="email"><br><br>
+            Password: <input type="password" name="password"><br><br>
+            <button value="submit">LogIn</button>
+        </form>
+    </div>
+</body>
+</html>
