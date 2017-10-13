@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  number: number = 10;
+  name: string = 'Stan Wawrinka';
+  user = {
+    firstName: 'Darth',
+    lastName: 'Vader',
+  }
+
+  numbers = [1,2,3,4,5];
+  loggedIn = true;
+  color: string = "red";
+
+  switch: boolean = true;
 }

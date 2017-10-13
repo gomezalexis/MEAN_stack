@@ -1,0 +1,22 @@
+h1{
+    color: goldenrod;
+}
+
+.red{
+    background-color: red;
+    margin: 6px;
+}
+
+.green{
+    background-color: green;
+    margin: 6px;
+}
+
+.bold{
+    font-weight: bold;
+    margin: 6px;
+}
+
+.on { 
+    background-color: yellow; 
+}
