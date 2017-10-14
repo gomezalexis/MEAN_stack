@@ -1,0 +1,11 @@
+<!--<div style="text-align:center">-->
+  <h1>
+    Welcome to {{title}}!
+  </h1>
+  <div class="switcharea">
+    <div *ngFor='let sw of allSwitches, let idx = index' class="switch" (click)='change(idx)'>
+      <p *ngIf='!sw.on' [ngClass]="{'red': sw.on}">OFF</p>
+      <p *ngIf='sw.on' [ngClass]="{'red': sw.on}">ON</p></div>
+
+  </div>
+

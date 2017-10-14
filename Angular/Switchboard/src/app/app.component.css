@@ -1,0 +1,31 @@
+h1{
+    text-align: center;
+}
+
+.switcharea{
+    text-align: center;
+    border: 3px dashed palevioletred;
+    margin: 0px 65px;
+    padding: 8px;
+}
+.switch{
+    display: inline-block;
+    border: 2px solid darkslategrey;
+    width: 50px;
+    margin: 10px;
+    height: 35px;
+    text-align: center;
+}
+
+p{
+    margin: 0px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: -webkit-baseline-middle;
+    padding: 9px;
+    background-color: lightgreen;
+}
+
+.red{
+    background-color: lightcoral;
+}
