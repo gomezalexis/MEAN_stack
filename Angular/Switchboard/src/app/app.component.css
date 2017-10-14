@@ -23,9 +23,13 @@ p{
     display: inline-block;
     vertical-align: -webkit-baseline-middle;
     padding: 9px;
-    background-color: lightgreen;
+    
 }
 
 .red{
     background-color: lightcoral;
+}
+
+.green{
+    background-color: lightgreen;
 }
