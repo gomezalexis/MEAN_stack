@@ -19,4 +19,9 @@
 <span [ngClass]="{'red': true, 'bold': true }">I should be red and bolded.</span><br><br>
 
 <span [ngClass]="{ 'on': switch }">I should be yellow.</span><br>
-<span [ngClass]="{ 'on': 1===1 }">I should be yellow.</span><br>
+<span [ngClass]="{ 'on': 1===1 }">I should be yellow.</span><br><br>
+
+<!--parenthesis to put an event-->
+<button (click)='logNum()'>Log the num value</button>
+<button (click)='num = num + 1'>Increment num</button>
+<button (click)='increaseNum()'>Increment num v2</button>

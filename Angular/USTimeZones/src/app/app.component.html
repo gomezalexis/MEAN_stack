@@ -1,0 +1,9 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h1>{{title}}</h1>
+
+<div class="allTimes">
+  <button *ngFor='let zone of timeZones' [ngClass]="{ 'yellow': zone.on}" (click)='changeHour(zone.difference, zone.id)'>{{zone.area}}</button>
+  <button (click)='reset()'>Clear</button>
+</div>
+<div id="timedisplay"><h2>{{displayDate | date: 'medium' }}</h2></div>
+

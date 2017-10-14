@@ -18,4 +18,15 @@ export class AppComponent {
   color: string = "red";
 
   switch: boolean = true;
+
+  num: number = 1;
+	logNum(): void{
+		console.log("num is: ", this.num);
+	};
+
+  increaseNum(){
+    this.num = this.num +1;
+    console.log("The number value is %s", this.num);
+  }
+
 }

@@ -1,0 +1,27 @@
+h1{
+    text-align: center;
+    background-color: palegreen;
+    margin: 0px 131px;
+    padding: 14px;
+}
+
+.allTimes{
+    text-align: center;
+}
+
+.allTimes button{
+    margin: 15px;
+    width: 70px;
+    height: 50px;
+}
+
+#timedisplay{
+    text-align: center;
+    background-color: lightpink;
+    margin: 5px 165px;
+    /*padding: 5px;*/
+}
+
+.yellow{
+    background-color: yellow;
+}
