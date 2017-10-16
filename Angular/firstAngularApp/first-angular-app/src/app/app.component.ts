@@ -13,6 +13,12 @@ export class AppComponent {
     lastName: 'Vader',
   }
 
+  // users = [];
+  // onSubmit(){
+  //   users.push(this.user);
+  //   this.user = {email:''}
+  // }
+
   numbers = [1,2,3,4,5];
   loggedIn = true;
   color: string = "red";

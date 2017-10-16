@@ -1,0 +1,74 @@
+<h1>{{title}}</h1>
+  <p *ngIf=lastUser class="theGood">Thank you for signing up {{lastUser.firstName}}</p>
+
+
+<div id="theform" class="container">
+  <h2>Account Information:</h2>
+
+  <form #userForm="ngForm" (ngSubmit)="onSubmit()" class="form-group">
+    <div class="form-group">
+      <label for="firstName">First Name:</label>
+      <input type="text" class="form-control" id="firstName" placeholder="First Name" name="firstName" required minlength="2"
+      maxlength="20" [(ngModel)]="user.firstName" #firstName='ngModel'/>
+      <div [hidden]='user.firstName.length === 0'>
+        <p *ngIf="firstName.touched && firstName.invalid" class="theBad"> <b>Invalid Name</b></p>
+        <p *ngIf="firstName.touched && firstName.valid" class="theGood">Good</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Last Name:</label>
+      <input type="text" class="form-control" name="lastName" placeholder="Last Name" required minlength="2"
+      maxlength="20" [(ngModel)]="user.lastName" #lastName="ngModel"/>
+      <div [hidden]='user.lastName.length === 0'>
+        <p *ngIf="lastName.touched && lastName.invalid" class="theBad"> <b>Invalid Last Name</b></p>
+        <p *ngIf="lastName.touched && lastName.valid" class="theGood">Good</p>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" placeholder="youremail@example.com" name="email" required 
+      [(ngModel)]="user.email" #email="ngModel"
+      pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"/>
+      <div [hidden]='user.email.length === 0'>
+        <p *ngIf="email.touched && email.invalid" class="theBad"> <b>Invalid Email format</b></p>
+        <p *ngIf="email.touched && email.valid" class="theGood">Good</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" class="form-control" name="password" required minlength="8"
+      maxlength="20" [(ngModel)]="user.password" #password="ngModel"/>
+
+      <div [hidden]='password.untouched || user.password.length === 0'>
+        <p *ngIf="password.touched && password.invalid" class="theBad"> <b>Invalid Password</b></p>
+        <p *ngIf="password.touched && password.valid" class="theGood">Good</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="passwordCofirm">Password Confirmation:</label>
+      <input type="password" class="form-control" name="passwordConfirm" required minlength="8"
+      maxlength="20" [(ngModel)]="user.passwordConfirm" #passwordConfirm="ngModel"/>
+      <div [hidden]='passwordConfirm.untouched || !user.passwordConfirm'>
+        <p *ngIf="user.password !== user.passwordConfirm" class="confirm"><b>Password needs to match!</b></p>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="lucky">I'm feeling lucky:</label>
+      <input type="radio" name="lucky" value="true" required
+      [(ngModel)]="user.lucky" #lucky="ngModel"/> YES
+      
+      <input type="radio" name="lucky" value="false" 
+      [(ngModel)]="user.lucky" #lucky="ngModel"/> NO 
+    </div>
+
+    <button type="submit" class="btn btn-success"
+    [disabled]="!userForm.form.valid">Submit</button>
+  </form>
+</div>
+
+

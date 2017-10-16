@@ -21,6 +21,11 @@
 <span [ngClass]="{ 'on': switch }">I should be yellow.</span><br>
 <span [ngClass]="{ 'on': 1===1 }">I should be yellow.</span><br><br>
 
+<!--<form (submit)="onSubmit()">
+  <input type="text" name="email" [(ngModel)]="user.email">
+  <input type="submit">
+</form><br><br>-->
+
 <!--parenthesis to put an event-->
 <button (click)='logNum()'>Log the num value</button>
 <button (click)='num = num + 1'>Increment num</button>
