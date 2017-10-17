@@ -1,0 +1,55 @@
+.quotedArea{
+    border: 3px dashed rgba(255, 51, 0,.5);
+    margin: 12px;
+    
+}
+
+.theButtons{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+}
+.quoandauth{
+    height: 158px;  
+    display: inline-block;
+    width: 405px;
+}
+.quoted{
+    font-size: 16px;
+    
+}
+
+.author{
+    color: royalblue;
+    display: inline;
+}
+
+.green{
+    background: rgb(221, 255, 153);
+    width: 95px;
+}
+
+.red{
+    background: rgb(255, 179, 179);
+    width: 95px;
+}
+
+.black{
+    background-color: black;
+    color: whitesmoke;
+    width: 95px;
+}
+
+form{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.toHide{
+    display: none;  
+}
+
+.theCount{
+    font-size: 20px;
+    color: purple;
+}

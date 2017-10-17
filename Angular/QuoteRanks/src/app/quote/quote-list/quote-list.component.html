@@ -1,0 +1,19 @@
+<h2 *ngIf="myQuotes.length !== 0">Quotes List:</h2>
+
+<div *ngFor="let q of myQuotes">
+  <div *ngIf="!q.erased" class='quotedArea container' id={{q.id}}>
+    <div class="quoandauth">
+      <p class="quoted">{{ q.theQuote }}</p>
+      <h4 class="author">- {{q.author}} -</h4>
+    </div>
+
+    <div class="theButtons">
+      
+      <button (click)="plusLike(q.id)" class="green">Vote Up</button><br>
+      <button (click)="substractLike(q.id)" class="red">Vote Down</button><br>
+      <button (click)="popQuote(q.id)" class="black">Delete</button>
+      
+    </div>
+    <p class="theCount">{{q.likes}} Likes!</p>
+  </div>
+</div>

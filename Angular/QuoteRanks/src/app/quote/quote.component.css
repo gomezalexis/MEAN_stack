@@ -1,0 +1,13 @@
+#theErrors{
+    display: inline-block;
+
+}
+
+#quoteForm{
+    margin-right: 10px;
+    width: 395px;
+}
+
+.warning{
+    background-color: rgb(255, 128, 128);
+}

@@ -1,0 +1,32 @@
+<h2>Add a Quote</h2>
+
+<div class="container">
+  <form #quoteForm="ngForm" (ngSubmit)="onSubmit()" class="form-group" id="quoteForm">
+    <div class="form-group">
+      <textarea name="theQuote" id="theQuote" cols="50" rows="8" placeholder="write a quote.."
+      maxlength="255" required minlength="4" [(ngModel)]=quote.theQuote #theQuote=ngModel>
+      </textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="author">Author:</label>
+      <input type="text" required name="author" placeholder="Author.." minlength="2"
+      [(ngModel)]="quote.author" #author='ngModel'>
+    </div>
+
+    <div [hidden]='quote.theQuote.length === 0'>
+      <p *ngIf="theQuote.invalid" class="warning"><b>Invalid Quote Format</b></p>
+    </div>
+    
+    <div [hidden]='quote.author.length === 0'>
+      <p *ngIf="author.invalid" class="warning"><b>Invalid Author Format</b></p>
+    </div>
+
+    <button type="submit" class="btn btn-success"
+    [disabled]="!quoteForm.form.valid">Add Quote</button>
+    <!--<div id="theErrors">
+      {{quote | json }}
+      </div>-->
+  </form>
+  <app-quote-list [myQuotes]="quotes" (deleteQuote)="deleteQuote($event)" (addLike)="addLike($event)" (lessLike)="lessLike($event)">Loading quote list</app-quote-list>
+</div>
