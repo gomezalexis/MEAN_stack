@@ -1,0 +1,23 @@
+
+<div class="container">
+<h1>Welcome to {{title}}</h1>
+<div class="container" id="theForm">
+  <form #gitForm="ngForm" (ngSubmit)="onSubmit()" class="form-group" id="gitForm">
+    
+    <label for="username">GitHub Username:</label>
+    <input type="text" class="form-control" minlength="3" required name="username" [(ngModel)]='username'
+    #gitUsername='ngModel' placeholder="Git Hub Username"> <br>
+
+    <div [hidden]='username.length === 0'>
+      <p *ngIf=gitUsername.invalid class="warning">Invalid Username</p>
+    </div><br>
+
+    <button type="submit" class="btn btn-success"
+    [disabled]="!gitForm.form.valid">Calculate GitHub score</button>
+  </form>
+</div>
+  <div *ngIf="score" class="container" id="info">
+    <p id="score"><span>Your score: {{score}}</span></p>
+    <img id="avatar" src="{{avatar}}" alt="avatar">
+  <div></div>
+</div>

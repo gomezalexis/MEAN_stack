@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+#score{
+    font-size: 22px;
+}
+
+#score span{
+    color: purple;
+}
+
+h1{
+    background-color: rgba(255, 77, 166, .51);
+    padding: 5px;
+    border: 1px hidden red;
+    border-radius: 7px;
+}
+
+#theForm{
+    border: 1px solid lightsalmon;
+    margin: 5px;
+    width: 350px;
+    display: inline-block;
+}
+
+#avatar{
+    display: inline-block;
+    width: 90%;
+}
+#info{
+    display: inline-block;
+    vertical-align: top;
+    width: 324px;
+}
