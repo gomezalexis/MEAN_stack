@@ -1,0 +1,14 @@
+ul,li{
+    display: inline-block;
+}
+
+#playButton{
+    padding: 10px;
+    background-color: lightgreen;
+}
+
+.great{
+    color: beige;
+    background-color: darkcyan;
+    padding: 10px;
+}

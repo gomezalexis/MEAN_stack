@@ -1,0 +1,23 @@
+<ul>
+  <li><a [routerLink]="['/dashboard']">Home</a></li> |
+  <li><a [routerLink]="['/list', theUser._id]">Bucket List</a></li>
+</ul>
+<h2>Hey {{theUser.firstName}},</h2>
+
+<h2>This is {{thirdUser.firstName}} Bucket List:</h2>
+
+<h3>Not Done:</h3>
+<div *ngFor="let a of thirdActivities">
+
+  <p *ngIf="!a.done">{{a.title}} - {{a.createdAt}}</p>
+
+</div>
+
+<h3>Done:</h3>
+<div *ngFor="let a of thirdActivities">
+
+  <p *ngIf="a.done">{{a.title}} - {{a.createdAt}}</p>
+
+</div>
+
+

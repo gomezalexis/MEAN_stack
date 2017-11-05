@@ -1,0 +1,46 @@
+#userForm{
+    border: 1px dashed salmon;
+    padding: 12px;
+    background-color: rgba(255, 230, 255,.5);
+    display: inline-block;
+    width: 327px;   
+}
+
+#loginForm{
+    border: 1px dashed salmon;
+    background-color: rgba(66, 220, 244,.5);
+    padding: 12px;
+    display: inline-block;
+    width: 327px;  
+}
+
+.theGood{
+    color: #42A948;
+}
+
+.theBad{
+    background-color: lightcoral;
+    font-size: 18px;
+}
+
+.confirm{
+    background-color: rgb(255, 255, 102);
+}
+#user_login{
+    display: inline-block;
+    vertical-align: top;
+}
+
+#user_registration{
+    display: inline-block;
+    vertical-align: top;
+}
+
+#bikeOfDay{
+    font-family: '"Comic Sans MS", cursive, sans-serif';
+    border: 5px dashed orangered;
+    width: 77%;
+    margin: 6px 10px;
+}
+
+

@@ -1,0 +1,38 @@
+<div class="container">
+  <ul>
+    <li><a [routerLink]="['/dashboard']">Home</a></li> |
+    <li><a [routerLink]="['/list', theUser._id]">Bucket List</a></li>
+    </ul>
+  <h3 id="holaUser">Hello: {{theUser.firstName}}</h3>
+
+  <form #activityForm='ngForm' (ngSubmit)="onSubmit()" class="form-group" id="activityForm">
+
+    <label for="title">Title:</label>
+    <input type="text" minlength="5" maxlength="30" required name="title" placeholder="Title.."
+    [(ngModel)]='activity.title' #title="ngModel"> <br>
+
+    <label for="description">Description</label><br>
+    <textarea name="description" id="" cols="30" rows="5" placeholder="Describe activity" required
+    minlength="10" maxlength="200" [(ngModel)]='activity.description' #description="ngModel">
+    </textarea><br>
+
+    <label for="tagged">Tag a user if you wish!</label>
+    <select name="tagged" id="tagUser" [(ngModel)]='activity.tagged'>
+      <option *ngFor='let u of allUsers' value="{{u._id}}">{{u.firstName}}</option>
+    </select>
+
+    <button type="submit" class="btn" [disabled]="!activityForm.form.valid">Add to Bucket</button>
+    <h4 *ngIf='receivedMessage' class="great">{{receivedMessage}}</h4>
+  </form>
+
+  <div id="beforeDie" class="container">
+    <h3>Before I die I want to: </h3>
+
+    <p *ngFor="let a of userActivities">- <b>{{a.title}}</b> created: {{a.createdAt}}<br> Description: {{a.description}}</p>
+  </div>
+
+  <div class="container">
+    <h3>List of Other Users:</h3>
+    <a *ngFor='let u of allUsers' [routerLink]="['/list', u._id ]">{{u.firstName}} {{u.lastName}}<br></a>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+#top_bar{
+    background-color: rgba(204, 139, 214, .55);
+}
+
+#top_bar a{
+    padding: 6px;
+}

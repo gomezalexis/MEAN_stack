@@ -1,0 +1,17 @@
+#addForm{
+    border: 1px dashed darkblue;
+    width: 400px;
+    display: inline-block;
+    background-color: cornsilk;
+}
+
+.yours{
+    border: 2px solid salmon;
+    margin: 8px;
+}
+
+.great{
+    color: beige;
+    background-color: darkcyan;
+    padding: 10px;
+}

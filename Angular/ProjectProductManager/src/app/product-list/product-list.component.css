@@ -1,0 +1,6 @@
+.container.aProduct{
+    border: 1px solid orangered;
+    width: 175px;
+    display: inline-block;
+    padding: 12px;
+}

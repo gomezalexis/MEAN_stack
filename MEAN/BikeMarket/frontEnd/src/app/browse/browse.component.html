@@ -1,0 +1,18 @@
+<div class="container">
+  <ul><li><a [routerLink]="['/bicycle', 'add-new']">Add bicycle</a></li></ul>
+  <h3 id="holaUser">Hello: {{theUser.firstName}}</h3> 
+  
+  <h2>The bicycles</h2>
+  {{ theContact | json}}
+  <div *ngFor='let b of allBicycles' class="eachBike">
+    <h3>{{b.title}}</h3>
+    <p><b>Price: </b>{{b.price | currency:'USD':true }}</p>
+    <h4><b>Location:</b> {{b.location}}</h4>
+    <p><b>Description:</b> {{b.description}}</p>
+    <p>{{b._user}}</p>
+
+    <button *ngIf='b._user === theUser._id' class="delete" (click)='deleteBike(b._id)'>Delete</button>
+    <button *ngIf='b._user !== theUser._id' class="contact" (click)='getContacto(b._user)'>Contact</button>
+    <h5 *ngIf='theContact._id === b._user' class="contacto">{{theContact.email}} <b>Name:</b> {{theContact.firstName}}</h5>
+  </div>
+</div>

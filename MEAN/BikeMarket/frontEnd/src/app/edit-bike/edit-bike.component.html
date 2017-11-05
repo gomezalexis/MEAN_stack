@@ -1,0 +1,23 @@
+<div class="container">
+  <a [routerLink]="['/browse']">Browse</a> |
+  <a [routerLink]="['/bicycle', 'add-new']">Add bicycle</a>
+
+  <h2>Edit your bicycle: {{showBike.title}}</h2>
+  <h3><b>Current Price:</b> {{showBike.price | currency:'USD':true}}</h3>
+  <h4><b>Current Location:</b> {{showBike.location}}</h4>
+  <form #updateForm="ngForm" (ngSubmit)="onSubmit()" id="updateForm">
+
+    <label for="price">New Price:</label>
+    <input type="number" class="form-control" name="price" required min="5"
+    max="1000" [(ngModel)]="updatedBicycle.price" #price="ngModel">
+
+    <label for="location">New Location:</label>
+    <input type="text" class="form-control" name="location" required minlength="3" 
+    [(ngModel)]="updatedBicycle.location" #location="ngModel">
+
+    <button type="submit" class="btn" [disabled]="!updateForm.form.valid || updatedBicycle.price > 1000">Edit Bicycle</button>
+  </form>
+  {{updatedBicycle | json}}
+  {{theId}}
+  <h3 *ngIf='receivedMessage' class="great">{{receivedMessage}}</h3>
+</div>

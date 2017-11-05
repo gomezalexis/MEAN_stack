@@ -1,0 +1,22 @@
+.eachBike{
+    border: 3px dashed darkorange;
+    padding: 0px 10px;
+    margin: 10px;
+}
+
+#holaUser{
+    background-color: khaki;
+    padding: 5px;
+}
+
+.delete{
+    background-color: rgb(255, 179, 179);
+}
+
+.contact{
+    background-color: rgb(179, 255, 204);
+}
+
+.contacto{
+    background-color: rgb(243, 230, 255);
+}

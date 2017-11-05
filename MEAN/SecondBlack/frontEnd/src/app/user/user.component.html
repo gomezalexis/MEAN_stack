@@ -1,0 +1,91 @@
+<div class="container">
+  <div *ngFor='let rand of randomBike' class="container" id="bikeOfDay">
+    <h3>Bike of the Day!</h3>
+    <h4>{{rand.title}}</h4>
+    <p><b>Price: {{rand.price | currency:'USD':true}}</b></p>
+    <p class="description">{{rand.description}}</p>
+  </div>
+  <div class="container" id="allForms">
+    <div id="user_registration">
+      <form #userForm='ngForm' (ngSubmit)="onSubmit()" class="form-group" id="userForm">
+        <h3>Register</h3>
+        <div class="form-group">
+          <label for="firstName">First Name:</label>
+          <input type="text" class="form-control" id="firstName" placeholder="Your first name.." name="firstName"
+          required minlength="2" maxlength="22" [(ngModel)]="user.firstName" #firstName='ngModel'/>
+          <div [hidden]='user.firstName.length === 0'>
+            <p *ngIf="firstName.touched && firstName.invalid" class="theBad"> <b>Invalid Name</b></p>
+            <p *ngIf="firstName.touched && firstName.valid" class="theGood">Good</p>
+          </div>
+        </div>
+        <div class="form-group"> 
+          <label for="lastName">Last Name:</label>
+          <input type="text" class="form-control" id="lastName" placeholder="Your Last Name.." name="lastName"
+          required minlength="2" maxlength="25" [(ngModel)]="user.lastName" #lastName='ngModel'/>
+          <div [hidden]='user.lastName.length === 0'>
+            <p *ngIf="lastName.touched && lastName.invalid" class="theBad"> <b>Invalid Last Name</b></p>
+            <p *ngIf="lastName.touched && lastName.valid" class="theGood">Good</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" placeholder="youremail@example.com" name="email" required 
+          [(ngModel)]="user.email" #email="ngModel"
+          pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"/>
+          <div [hidden]='user.email.length === 0'>
+            <p *ngIf="email.touched && email.invalid" class="theBad"> <b>Invalid Email format</b></p>
+            <p *ngIf="email.touched && email.valid" class="theGood">Good</p>
+          </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" name="password" required minlength="6"
+        maxlength="20" [(ngModel)]="user.password" #password="ngModel"/>
+
+        <div [hidden]='user.password.length === 0'>
+          <p *ngIf="password.touched && password.invalid" class="theBad"> <b>Invalid Password</b></p>
+          <p *ngIf="password.touched && password.valid" class="theGood">Good</p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="passwordCofirm">Password Confirmation:</label>
+        <input type="password" class="form-control" name="passwordConfirm" required minlength="8"
+        maxlength="20" [(ngModel)]="passwordConfirm" #psswordConfirm="ngModel"/>
+        <div [hidden]='passwordConfirm.untouched'>
+          <p *ngIf="user.password !== passwordConfirm" class="confirm"><b>Password needs to match!</b></p>
+        </div>
+      </div>
+      <p *ngIf=receivedMessage class="theBad">{{receivedMessage}}</p>
+      <button type="submit" class="btn btn-success"
+      [disabled]="!userForm.form.valid" [disabled]="user.password !== passwordConfirm">Submit</button>
+
+      </form>
+    </div>
+
+    <div id="user_login"> 
+      <form #loginForm='ngForm' (ngSubmit)="onSubmit()" class="form-group" id="loginForm">
+        <h3>Login</h3>
+        <div class="form-group">
+          <label for="userEmail">Email:</label>
+          <input type="text" name="userEmail" class="form-control" id="userEmail" required
+          pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+          [(ngModel)]="oldUser.userEmail" #theEmail="ngModel">
+        </div>
+        <p [hidden]="theEmail.invalid || 4 > oldUser.userEmail.length ">Good</p>
+
+        <div class="form-group">
+
+          <label for="userPassword">Password:</label>
+          <input type="password" class="form-control" name="userPassword" required minlength="6"
+          [(ngModel)]="oldUser.userPassword" #thePassword="ngModel">
+        </div>
+        {{oldUser | json}}
+        <p *ngIf=oldMessage class="theBad">{{oldMessage}}</p>
+        <button type="submit" class="btn btn-success"
+        [disabled]="!loginForm.form.valid">Submit</button>
+      </form>
+
+    </div>
+  </div>
+</div>
